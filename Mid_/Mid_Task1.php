@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task1</title>
 </head>
+
 <body>
     <center>
 
@@ -13,7 +14,9 @@
 
      </center>
 
-    <table>
+<table> 
+<form action="">
+
     <tr>
     <td><p><b>Complete The Registration</b></p></td>
     </tr>
@@ -36,35 +39,55 @@
 
     <tr>
     <td>Gender:</td>
-    <td><input type="radio" name="des"> Male </td>
-    <td><input type="radio" name="des"> Other </td>
+    <td>
+        <input type="radio" name="des"> Male
+        <input type="radio" name="des"> Other
+    </td>
     </tr>
 
     <tr>
     <td>Language Knowledge:</td>
-    <td><input type="checkbox" name="des"> English </td>
-    <td><input type="checkbox" name="des"> Bangla </td>
-    <td><input type="checkbox" name="des"> Hindi </td>
+    <td>
+        <input type="checkbox" name="des"> English
+        <input type="checkbox" name="des"> Bangla
+        <input type="checkbox" name="des"> Hindi 
+    </td>
     </tr>
 
     <tr>
     <td> Country:</td>
-    <td><select>
+    <td>
+    <select>
+    <option value="">-Select-</option>
     <option value="">Bangladesh</option>
     <option value="">India</option>
     <option value="">Pakistan</option>
-    </select></td>
+    </select>
+    </td>
     </tr>
 
     <tr>
     <td>Date of Birth</td>
     <td><input type="date"></td>
-
     </tr>
 
     <tr>
-    <td><input style="background-color: rgba(31, 25, 17, 0.5);" type="submit" value="Submit"></td>
+    <td>Upload Photo:</td>
+    <td><input type="file" name="Choose file"></td>
     </tr>
+
+    <tr>
+    <td>Comments:</td>
+    <td><textarea name="comments" id="comments" rows="5" cols="40"></textarea></td>
+    </tr>
+
+    <tr>
+    <td>
+    <input type="submit" value="Register">
+    </td>
+    </tr>
+
+</form>
 </table>
 
 </body>
