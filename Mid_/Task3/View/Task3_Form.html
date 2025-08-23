@@ -3,12 +3,12 @@
 <head>
     <title>Task 3</title>
     <link rel="stylesheet" href="http://localhost/WebTech/Mid_/Task3/CSS/Task3_Style.css">
-    <script src="Task3_Valid.js"></script>
+    <script src="http://localhost/WebTech/Mid_/Task3/JS/Task3_Valid.js"></script>
 </head>
 
 <body>
 
-    <form action="submit" onsubmit="validateForm()">
+    <form onsubmit="validateForm()">
 
         <h3>Donor Information</h3>
 
@@ -83,7 +83,7 @@
         <br>
         <br>
         <input type="reset" value="Reset">
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="validateForm()">Submit</button>
 
     </form>
 
