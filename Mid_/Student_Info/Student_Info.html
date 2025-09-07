@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student info</title>
+</head>
+<body>
+  <script>
+    var student =
+    {
+      Name: "Hamim",
+      Age: 19,
+      isStudent: true,
+
+      marks:
+      {
+        Math: 85,
+        English: 78,
+        Science: 92
+      }
+    };
+
+    var total = 0;
+    var subjects = Object.keys(student.marks);
+    for (var i = 0; i < subjects.length; i++) {
+      total += student.marks[subjects[i]];
+    }
+    
+    var average = total / subjects.length;
+
+    var isAdult = student.age >= 18;
+    var passed = average >= 60;
+
+    console.log("Student Marks:");
+    for (var subject in student.marks) {
+      console.log(subject + ": " + student.marks[subject]);
+    }
+
+    function displaySummary() {
+      var summary = "Name: " + student.Name + "\n";
+      summary += "Age: " + student.Age + "\n";
+      summary += "Average Marks: " + average.toFixed(2) + "\n";
+      summary += "Status: " + (passed ? "Passed" : "Failed") + "\n";
+      alert(summary);
+    }
+  </script>
+
+ <h2>Showing the result</h2>
+
+  <br>
+  <button onclick="displaySummary()">Show Result</button>
+</body>
+</html>

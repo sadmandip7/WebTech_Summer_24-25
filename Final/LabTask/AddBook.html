@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add Book</h1>
+
+        <form action="AddBook.php" method="POST" onsubmit="return validateForm()">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author">
+
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year">
+
+            <button type="submit">Add Book</button>
+        </form>
+
+        <table id="book-list">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function validateForm() {
+            var title = document.getElementById('title').value.trim();
+            var author = document.getElementById('author').value.trim();
+            var year = document.getElementById('year').value.trim();
+
+            if (title === '' || author === '' || year === '') {
+                alert('All fields are required!');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
